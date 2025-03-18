@@ -1,0 +1,2 @@
+GM23338 ENCFF395DAJ    https://www.encodeproject.org/files/ENCFF395DAJ/@@download/ENCFF395DAJ.bam   
+GM23338 ENCFF956GLJ   https://www.encodeproject.org/files/ENCFF956GLJ/@@download/ENCFF956GLJ.bam
