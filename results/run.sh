@@ -9,10 +9,13 @@ function samplelist {
     done
 }
 function broadpeakcalling {
- control="${sampledir}/GM23338_ENCFF395DAJ"
- treatment="${sampledir}/GM23338_ENCFF956GLJ"
+    rm -rf ${scratch}/data/peak
+    mkdir ${scratch}/data/peak
+    peak="${scratch}/data/peak"
+    control="${sampledir}/GM23338_ENCFF395DAJ.bam"
+    treatment="${sampledir}/GM23338_ENCFF956GLJ.bam"
 
-macs2 callpeak -t ${treatment} -c ${control} -f BAMPE -g 04.9e8 -n neuroGM23338_macs2_rep1
+    macs2 callpeak --broad -t ${treatment} -c ${control} -f BAMPE -g 04.9e8 -n ${peak}/neuroGM23338_macs2_rep1
 # -t This is the only REQUIRED parameter for MACS. The file can be in any supported format 
 #-- see detail in the --format option. If you have more than one alignment file, you can specify them as -t A B C. MACS will pool up all these files together.
 
@@ -43,6 +46,16 @@ macs2 callpeak -t ${treatment} -c ${control} -f BAMPE -g 04.9e8 -n neuroGM23338_
 #like NAME_peaks.xls, NAME_negative_peaks.xls, NAME_peaks.bed , NAME_summits.bed, NAME_model.r and so on. So please avoid any confliction between these filenames and your existing files.
 
 }
+function broaddomainfiltering {
+    rm -rf peaks
+    mkdir peaks
+    cut -f 1-6 neuroGM23338_macs3_rep1_peaks.broadPeak >neuroGM23338_macs2_rep1_peaks.bed
+    cut -f 1-6 neuroGM23338_macs3_rep2_peaks.broadPeak >neuroGM23338_macs2_rep2_peaks.bed
+    # selects first 7 columns of broadpeak created in the calling step and creates a BED-6 format
+    #in order to use with bedtools
+    #use wc -l to identify how many peaks counted here compared to previous file 
+
+}
 
 #samplelist
-#roadpeakcalling
+broadpeakcalling
