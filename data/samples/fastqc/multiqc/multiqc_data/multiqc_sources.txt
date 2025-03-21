@@ -1,0 +1,3 @@
+Module	Section	Sample Name	Source
+FastQC	all_sections	wt_H3K4me3_read2	/sc/arion/scratch/arayan01/projects/chipseq_tut/data/samples/fastqc/wt_H3K4me3_read2_fastqc.zip
+FastQC	all_sections	wt_H3K4me3_read1	/sc/arion/scratch/arayan01/projects/chipseq_tut/data/samples/fastqc/wt_H3K4me3_read1_fastqc.zip
