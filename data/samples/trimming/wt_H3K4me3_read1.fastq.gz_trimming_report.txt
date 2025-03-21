@@ -1,0 +1,74 @@
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: /sc/arion/scratch/arayan01/projects/chipseq_tut/data/samples/wt_H3K4me3_read1.fastq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.6.10
+Cutadapt version: 1.18
+Number of cores used for trimming: 1
+Quality Phred score cutoff: 15
+Quality encoding type selected: ASCII+33
+Using Illumina adapter for trimming (count: 2). Second best hit was smallRNA (count: 0)
+Adapter sequence: 'AGATCGGAAGAGC' (Illumina TruSeq, Sanger iPCR; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 3 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Output file will be GZIP compressed
+
+
+This is cutadapt 1.18 with Python 2.7.18
+Command line parameters: -j 1 -e 0.1 -q 15 -O 3 -a AGATCGGAAGAGC /sc/arion/scratch/arayan01/projects/chipseq_tut/data/samples/wt_H3K4me3_read1.fastq.gz
+Processing reads on 1 core in single-end mode ...
+Finished in 0.97 s (19 us/read; 3.10 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:                  50,000
+Reads with adapters:                       992 (2.0%)
+Reads written (passing filters):        50,000 (100.0%)
+
+Total basepairs processed:     2,550,000 bp
+Quality-trimmed:                  32,198 bp (1.3%)
+Total written (filtered):      2,514,258 bp (98.6%)
+
+=== Adapter 1 ===
+
+Sequence: AGATCGGAAGAGC; Type: regular 3'; Length: 13; Trimmed: 992 times.
+
+No. of allowed errors:
+0-9 bp: 0; 10-13 bp: 1
+
+Bases preceding removed adapters:
+  A: 23.6%
+  C: 32.4%
+  G: 31.6%
+  T: 12.5%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+3	793	781.2	0	793
+4	138	195.3	0	138
+5	33	48.8	0	33
+6	9	12.2	0	9
+7	3	3.1	0	3
+8	1	0.8	0	1
+9	1	0.2	0	0 1
+10	3	0.0	1	0 3
+11	1	0.0	1	1
+15	1	0.0	1	1
+16	1	0.0	1	0 1
+19	1	0.0	1	1
+27	1	0.0	1	0 1
+28	1	0.0	1	0 1
+32	1	0.0	1	0 1
+36	1	0.0	1	0 1
+43	1	0.0	1	0 1
+49	1	0.0	1	0 1
+50	1	0.0	1	0 1
+
+
+RUN STATISTICS FOR INPUT FILE: /sc/arion/scratch/arayan01/projects/chipseq_tut/data/samples/wt_H3K4me3_read1.fastq.gz
+=============================================
+50000 sequences processed in total
+
